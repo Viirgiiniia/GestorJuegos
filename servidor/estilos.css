@@ -1,0 +1,68 @@
+.cabecera{
+    text-align: center;
+    color:green;
+    background-color: black;
+    position: absolute;
+    top:0em;
+    width: 100%;
+    clear: both;
+     font-family:Courier;
+    
+}
+.pie{
+    text-align: center;
+    color: white;
+    background-color: black;
+    position: absolute;
+    bottom: 0em;
+    width: 100%;
+    clear: both;
+    
+}
+.contenido{
+    margin:2em;
+    padding: 2.5em;
+    
+}
+
+.juego{
+    margin:3em;
+    padding:1.5em;
+    background-color:green;
+    border-radius:1em;
+    width:20%;
+}
+
+
+.imagen{
+    width: 100px;
+    height: auto;
+    clear: both;
+    border-radius: 50%;
+    
+}
+.titulo{
+    width: 100%;
+    clear:both;
+    text-align: center;
+    font-size: large;
+}
+.fechaValor{
+    width: 100%;
+    clear:both;
+    color: #ccc;
+}
+.fecha{
+    float: left;
+    font-size: xx-small;
+    
+}
+.valoracion{
+    float: right;
+    font-size: x-small;
+    
+}
+    
+
+
+
