@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/ordenarpor"
+            android:checkable="false"
+            android:enabled="true"
+            android:title="Ordenar por :"
+            android:visible="true" />
+        <item
+            android:id="@+id/ordenaFecha"
+            android:icon="@android:drawable/ic_menu_today"
+            android:title="fecha" />
+        <item
+            android:id="@+id/ordenatitulo"
+            android:icon="@android:drawable/ic_menu_sort_alphabetically"
+            android:title="título" />
+        <item
+            android:id="@+id/ordenaPuntuacion"
+            android:icon="@android:drawable/star_big_off"
+            android:title="puntuación" />
+        <item
+            android:id="@+id/recargar"
+
+            android:title="RECARGAR" />
+    </group>
+
+</menu>

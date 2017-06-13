@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#813ab7</color>
+    <color name="colorPrimaryDark">#6b2da8</color>
+    <color name="colorAccent">#66f430</color>
+    <color name="nuevoColor">#9feb99</color>
+    <color name="sombraListView">#d1efd0</color>
+    <color name="fondoCardView">#3969fd2a</color>
+</resources>

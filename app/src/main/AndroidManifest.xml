@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.dam.gestordejuegos">
+
+
+    <!-- PERMISO DE GALERIA DE IMAGENES -->
+    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
+
+    <!-- permiso de camara -->
+    <uses-feature android:name="android.hardware.camera2" android:required="true"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".mvp.vista.vista.VistaGJ"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".mvp.vista.vista.Edicion"
+            android:parentActivityName=".mvp.vista.vista.VistaGJ">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".mvp.vista.vista.VistaGJ" ></meta-data>
+        </activity>
+        <activity android:name=".mvp.vista.vista.VistaJuego"
+            android:parentActivityName=".mvp.vista.vista.VistaGJ">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".mvp.vista.vista.VistaGJ" ></meta-data>
+        </activity>
+        <activity android:name=".mvp.vista.vista.EdicionEntrada"
+            android:parentActivityName=".mvp.vista.vista.Edicion">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".mvp.vista.vista.Edicion" ></meta-data>
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+
+        <provider
+
+            android:authorities="com.example.dam.gestordejuegos.contentprovider"
+            android:name="com.example.dam.gestordejuegos.contentprovider.Provider"
+            android:grantUriPermissions="true"
+            android:enabled="true"
+            android:exported="false"
+            android:syncable="true"/>
+
+            <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>

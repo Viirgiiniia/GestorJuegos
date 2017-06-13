@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:id="@+id/cvMiniatura"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="3dp"
+    android:foreground="?selectableItemBackground"
+    android:orientation="vertical"
+    android:padding="3dp"
+    android:paddingBottom="2dp"
+
+    android:paddingEnd="3dp"
+    android:paddingLeft="2dp"
+    android:paddingRight="2dp"
+    android:paddingStart="3dp"
+    android:paddingTop="2dp"
+    android:weightSum="1"
+    app:cardBackgroundColor="@color/fondoCardView"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="2dp"
+    app:layout_collapseParallaxMultiplier="1.0"
+    card_view:cardBackgroundColor="?android:attr/colorPressedHighlight"
+    card_view:cardCornerRadius="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/miImagen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.26"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/side_nav_bar" />
+
+        <TextView
+            android:id="@+id/miTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:text="Super Mario Bros"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/miFecha"
+            android:layout_width="393dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewStart"
+            android:textColor="@color/cardview_dark_background" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>

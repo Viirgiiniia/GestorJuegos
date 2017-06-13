@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_edicion"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.dam.gestordejuegos.mvp.vista.vista.Edicion"
+    android:weightSum="1">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.14" />
+
+            <EditText
+                android:id="@+id/etTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="casual"
+                android:hint="Titulo"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <ImageButton
+                android:id="@+id/ibImagen"
+                android:layout_width="match_parent"
+                android:layout_height="129dp"
+                android:elevation="5dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@mipmap/ic_launcher" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RatingBar
+                    android:id="@+id/estrellas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:rating="0"
+                    android:stepSize="1"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etDescripcion"
+                style="@style/Widget.AppCompat.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="sans-serif"
+                android:hint="Descripcion"
+                android:inputType="textMultiLine"
+                android:selectAllOnFocus="false"
+                android:singleLine="false"
+                android:textAlignment="viewStart"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/llTrucos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/common_plus_signin_btn_text_dark_disabled"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="351dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="cursive"
+                    android:text="TRUCOS"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btT"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:text="+"
+                    android:textAlignment="viewEnd" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvTrucos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/llLogros"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/common_plus_signin_btn_text_light_disabled"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="cursive"
+                    android:text="LOGROS"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btL"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:text="+"
+                    android:textAlignment="viewEnd" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvLogros"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/llOtros"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/common_plus_signin_btn_text_light_disabled"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="348dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="cursive"
+                    android:text="OTROS"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btO"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:text="+"
+                    android:textAlignment="viewEnd" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvOtros"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <Button
+                android:text="Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ok"
+                tools:text="GUARDAR"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                style="@style/Widget.AppCompat.Button" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

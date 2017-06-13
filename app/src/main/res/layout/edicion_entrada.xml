@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_edicion"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.dam.gestordejuegos.mvp.vista.vista.Edicion"
+    android:weightSum="1">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:layout_width="match_parent"
+                app:srcCompat="@mipmap/ic_launcher"
+                android:id="@+id/ibEntrada"
+                android:layout_height="169dp" />
+
+            <EditText
+                android:id="@+id/etEntrada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Describa aqui ..."
+                android:inputType="textMultiLine"
+                android:textAlignment="viewStart" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/btCancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#f6cbcb"
+                    android:elevation="1dp"
+                    android:text="CANCELAR" />
+
+                <Button
+                    android:id="@+id/btAceptar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#c1ebb1"
+                    android:elevation="1dp"
+                    android:text="ACEPTAR" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
